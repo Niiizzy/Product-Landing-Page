@@ -1,0 +1,525 @@
+/* ============================================
+   CYBERSHIELD X
+   Product Landing Page
+   ============================================ */
+
+/* ---------- GLOBAL RESET ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #05080d;
+  color: #f4f7fb;
+  line-height: 1.6;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+
+/* ---------- HEADER / NAVIGATION ---------- */
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 6%;
+
+  background: rgba(5, 8, 13, 0.95);
+  border-bottom: 1px solid #1d2936;
+
+  z-index: 1000;
+}
+
+#header-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-right: auto;
+}
+
+.brand-name span {
+  color: #32e6a1;
+}
+
+
+/* ---------- NAV ---------- */
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  color: #c5d0dc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #32e6a1;
+}
+
+
+/* ---------- HERO ---------- */
+
+#hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 8% 80px;
+
+  background:
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(50, 230, 161, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #05080d,
+      #09121b
+    );
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: #32e6a1;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  margin-bottom: 30px;
+}
+
+h1 span {
+  display: block;
+  color: #32e6a1;
+}
+
+.hero-text {
+  max-width: 620px;
+  color: #aab7c4;
+  font-size: 1.15rem;
+  margin-bottom: 35px;
+}
+
+.hero-button {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background: #32e6a1;
+  color: #04100b;
+
+  text-decoration: none;
+  font-weight: 800;
+
+  border-radius: 4px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #64f0bb;
+  transform: translateY(-3px);
+}
+
+
+/* ---------- GENERAL SECTIONS ---------- */
+
+#features,
+#technology,
+#pricing,
+#signup {
+  padding: 110px 8%;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.section-heading > p:last-child {
+  color: #94a3b1;
+}
+
+
+/* ---------- FEATURES ---------- */
+
+/*
+   CSS FLEXBOX REQUIREMENT:
+   The feature container uses display:flex.
+*/
+
+.feature-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  flex: 1 1 280px;
+  max-width: 360px;
+
+  padding: 35px;
+
+  background: #0b121a;
+  border: 1px solid #1c2a37;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: #32e6a1;
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #32e6a1;
+  color: #32e6a1;
+
+  font-weight: 800;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #8998a7;
+}
+
+
+/* ---------- TECHNOLOGY / VIDEO ---------- */
+
+#technology {
+  background: #080e15;
+}
+
+.video-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+
+  border: 1px solid #243442;
+  padding: 10px;
+  background: #020507;
+}
+
+#video {
+  display: block;
+
+  width: 100%;
+  height: 500px;
+
+  border: none;
+}
+
+
+/* ---------- PRICING ---------- */
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.price-card {
+  position: relative;
+
+  flex: 1 1 280px;
+  max-width: 350px;
+
+  padding: 40px 30px;
+
+  background: #0b121a;
+  border: 1px solid #1c2a37;
+
+  text-align: center;
+}
+
+.price-card.featured {
+  border-color: #32e6a1;
+}
+
+.popular {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 5px 14px;
+
+  background: #32e6a1;
+  color: #04100b;
+
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.price span {
+  font-size: 0.9rem;
+  color: #82909d;
+  font-weight: normal;
+}
+
+.price-card > p {
+  color: #8998a7;
+  margin-bottom: 25px;
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.price-card li {
+  padding: 8px 0;
+  color: #c3ced8;
+  border-bottom: 1px solid #18232e;
+}
+
+.price-card button {
+  width: 100%;
+  padding: 13px;
+
+  background: transparent;
+  border: 1px solid #32e6a1;
+  color: #32e6a1;
+
+  font-weight: 800;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.price-card button:hover {
+  background: #32e6a1;
+  color: #04100b;
+}
+
+
+/* ---------- SIGNUP ---------- */
+
+#signup {
+  background:
+    linear-gradient(
+      135deg,
+      #07120f,
+      #05080d
+    );
+}
+
+.signup-content {
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
+}
+
+.signup-content h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.signup-content > p:not(.eyebrow) {
+  color: #94a3b1;
+  margin-bottom: 30px;
+}
+
+#form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#email {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 15px 18px;
+
+  background: #0a1118;
+  border: 1px solid #2a3a48;
+
+  color: white;
+  outline: none;
+}
+
+#email:focus {
+  border-color: #32e6a1;
+}
+
+#submit {
+  padding: 15px 25px;
+
+  background: #32e6a1;
+  border: none;
+
+  color: #04100b;
+
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+#submit:hover {
+  background: #64f0bb;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+#footer {
+  padding: 30px 8%;
+
+  border-top: 1px solid #18232e;
+
+  text-align: center;
+
+  color: #667583;
+  font-size: 0.85rem;
+}
+
+
+/* ============================================
+   MEDIA QUERY REQUIREMENT
+   Responsive design for smaller screens
+   ============================================ */
+
+@media (max-width: 700px) {
+
+  #header {
+    height: auto;
+    min-height: 70px;
+
+    padding: 12px 5%;
+
+    flex-wrap: wrap;
+  }
+
+  #header-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 0.85rem;
+  }
+
+  #nav-bar {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding-top: 10px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  #hero {
+    padding-top: 160px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  #video {
+    height: 300px;
+  }
+
+  #form {
+    flex-direction: column;
+  }
+
+  #email,
+  #submit {
+    width: 100%;
+  }
+
+  .signup-content h2 {
+    font-size: 2.2rem;
+  }
+
+}
